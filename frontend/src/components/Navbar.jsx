@@ -1,0 +1,36 @@
+import { Link } from "react-router-dom";
+import { FaLanguage } from "react-icons/fa";
+
+function Navbar() {
+  return (
+    <nav className="bg-blue-600 text-white shadow">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-2xl font-bold"
+        >
+          <FaLanguage />
+          Local Language Learning
+        </Link>
+
+        <div className="flex gap-6 text-lg">
+
+          <Link to="/">Home</Link>
+
+          <Link to="/lessons">Lessons</Link>
+
+          <Link to="/progress">Progress</Link>
+
+          <Link to="/login">Login</Link>
+
+          <Link to="/register">Register</Link>
+
+        </div>
+
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
