@@ -28,3 +28,22 @@ const userSchema = new mongoose.Schema(
 
     selectedLanguage: {
       type: String,
+      enum: [
+        "Marathi",
+        "Hindi",
+        "English",
+        "Gujarati",
+        "Tamil",
+        "Telugu",
+        "Kannada",
+        "Malayalam"
+      ],
+      default: "Marathi",
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+module.exports = mongoose.model("User", userSchema);
